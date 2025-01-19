@@ -18,6 +18,7 @@ async function getRandomActivity() {
   try {
     const response = await fetch(BORED_API_BASE_URL + 'activity');
     if (response.ok) {
+      console.log('Successfully fetched base URL');
       const data = await response.json();
       return data.activity;
     } else {
